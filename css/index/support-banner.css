@@ -1,0 +1,88 @@
+/* SUPPORT SECTION */
+.support {
+  margin-top: 5em;
+  background-color: #ca4172;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 50px;
+}
+
+.support h2 {
+  color: #fff;
+  font-size: 3em;
+  font-weight: 300;
+}
+
+/*  BANNER SECTION */
+
+.banner {
+  background-image: url("../../img/banner.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: auto;
+  width: 100vw;
+  max-width: 100%;
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(11, 1fr);
+  height: 100vh;
+}
+
+.banner .rating {
+  grid-column: 3 / 4;
+}
+.banner .rating {
+  text-align: center;
+}
+
+.banner .secundary-info {
+  grid-column: 8 / 11;
+}
+
+.banner h2 {
+  font-size: 3em;
+}
+
+.secundary-info h2,
+.secundary-info h3 {
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  /* SUPPORT SECTION */
+  .support {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .support .support-info h2 {
+    font-size: 2em;
+    font-weight: 500;
+  }
+
+  .support .support-info {
+    text-align: center;
+  }
+
+  .support img {
+    margin-top: 50px;
+  }
+
+  /* BANNER SECTION */
+  #banner {
+    height: 50vh;
+    background-position: center;
+  }
+
+  .banner .rating img {
+    width: 50px;
+  }
+  .banner .rating h2 {
+    font-size: 2em;
+  }
+
+  .banner .secundary-info {
+    display: none;
+  }
+}

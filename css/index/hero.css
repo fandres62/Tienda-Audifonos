@@ -1,0 +1,156 @@
+.hero {
+  width: 100vw;
+  max-width: 100%;
+  height: 102vh;
+  background-image: url("../../img/vectores/vector-1.png");
+}
+
+.navbar {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  padding: 30px;
+}
+
+.navbar .brand {
+  color: #f7b733;
+}
+
+.navbar .menu {
+  grid-column: 6 / 9;
+  display: flex;
+  margin-top: 12px;
+}
+
+.menu li {
+  /* eliminar puntos */
+  list-style: none;
+}
+
+.menu li a {
+  /*eliminar linea*/
+  text-decoration: none;
+  margin-right: 3em;
+  font-size: 1.3em;
+  color: #fff;
+  font-weight: 200;
+  padding: 10px 20px;
+}
+.menu li a:hover {
+  background-color: #f7b733;
+  color: #000;
+  transition: all 0.5s;
+}
+
+.menu-bar {
+  /* oculta menu */
+  display: none;
+}
+
+/* MAIN SECTION */
+
+.main {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.content-info {
+  margin-top: 5em;
+  color: #fff;
+}
+
+button {
+  cursor: pointer;
+  color: #fff;
+  box-shadow: 0px 3px 14px -8px rgba(0, 0, 0, 0.78);
+}
+button:hover {
+  box-shadow: none;
+}
+
+.btn-toBuy,
+.read-more {
+  background-color: #ca4172;
+  padding: 8px 40px;
+  font-size: 1.2em;
+  border-radius: 20px;
+  border: none;
+}
+
+.read-more {
+  background: none;
+  border: 1px solid #fff;
+  margin: 20px;
+}
+
+.main img {
+  margin-top: 3em;
+}
+@media screen and (max-width: 600px) {
+  .hero {
+    overflow-x: hidden;
+  }
+
+  .navbar {
+    background-color: #ca4172;
+    height: 80px;
+    /* Sombra borde de la caja*/
+    box-shadow: 2px 2px 15px 0px rgba(0, 0, 0, 0.42);
+    align-items: center;
+  }
+  .navbar h2 {
+    font-size: 2em;
+  }
+  .navbar .menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    background-color: #ca4172;
+    height: 50vh;
+    left: -1em;
+    /* transporta el menu hacia riba para ocultar */
+    transform: translateY(-120%);
+    transition: all 1.4s;
+    z-index: 1;
+  }
+  .navbar .menu-toggle {
+    /* esta clase no pertenece al html, pero la voy utilizar con JS para traer el menu*/
+    transform: translateY(0%);
+  }
+  .menu li {
+    margin-top: 3em;
+  }
+  .navbar .menu-bar {
+    /* aparece  el icono del boton */
+    display: block;
+    font-size: 2em;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  /* MAIN SECTION */
+
+  .main {
+    display: flex;
+    /* agg al reves los elemntos para q salga primero la img  */
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    height: 70vh;
+    margin-top: 30px;
+  }
+  .main img {
+    width: 12em;
+  }
+  .main h1 {
+    margin-top: -80px;
+  }
+  .main .button-content {
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+  }
+}
